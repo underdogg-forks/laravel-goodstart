@@ -19,7 +19,7 @@
             </li>
             <li class="nav-title">Components</li>
             <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="/#">
+              <a class="nav-link nav-dropdown-toggle" href="#">
                 <i class="nav-icon icon-puzzle"></i> Base</a>
               <ul class="nav-dropdown-items">
                 <li class="nav-item">
@@ -89,23 +89,23 @@
               </ul>
             </li>
             <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="/#">
+              <a class="nav-link nav-dropdown-toggle" href="#">
                 <i class="nav-icon icon-cursor"></i> Buttons</a>
               <ul class="nav-dropdown-items">
                 <li class="nav-item">
-                  <a class="nav-link" href="/buttons/buttons">
+                  <a class="nav-link" href="/buttons">
                     <i class="nav-icon icon-cursor"></i> Buttons</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/buttons/button-group">
+                  <a class="nav-link" href="/button-group">
                     <i class="nav-icon icon-cursor"></i> Buttons Group</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/buttons/dropdowns">
+                  <a class="nav-link" href="/dropdowns">
                     <i class="nav-icon icon-cursor"></i> Dropdowns</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/buttons/brand-buttons">
+                  <a class="nav-link" href="/brand-buttons">
                     <i class="nav-icon icon-cursor"></i> Brand Buttons</a>
                 </li>
               </ul>
@@ -115,45 +115,45 @@
                 <i class="nav-icon icon-pie-chart"></i> Charts</a>
             </li>
             <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="/#">
+              <a class="nav-link nav-dropdown-toggle" href="#">
                 <i class="nav-icon icon-star"></i> Icons</a>
               <ul class="nav-dropdown-items">
                 <li class="nav-item">
-                  <a class="nav-link" href="/icons/coreui-icons">
+                  <a class="nav-link" href="/coreui-icons">
                     <i class="nav-icon icon-star"></i> CoreUI Icons
                     <span class="badge badge-success">NEW</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/icons/flags">
+                  <a class="nav-link" href="/flags">
                     <i class="nav-icon icon-star"></i> Flags</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/icons/font-awesome">
+                  <a class="nav-link" href="/font-awesome">
                     <i class="nav-icon icon-star"></i> Font Awesome
                     <span class="badge badge-secondary">4.7</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/icons/simple-line-icons">
+                  <a class="nav-link" href="/simple-line-icons">
                     <i class="nav-icon icon-star"></i> Simple Line Icons</a>
                 </li>
               </ul>
             </li>
             <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="/#">
+              <a class="nav-link nav-dropdown-toggle" href="#">
                 <i class="nav-icon icon-bell"></i> Notifications</a>
               <ul class="nav-dropdown-items">
                 <li class="nav-item">
-                  <a class="nav-link" href="/notifications/alerts">
+                  <a class="nav-link" href="/alerts">
                     <i class="nav-icon icon-bell"></i> Alerts</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/notifications/badge">
+                  <a class="nav-link" href="/badge">
                     <i class="nav-icon icon-bell"></i> Badge</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/notifications/modals">
+                  <a class="nav-link" href="/modals">
                     <i class="nav-icon icon-bell"></i> Modals</a>
                 </li>
               </ul>
@@ -167,7 +167,7 @@
             <li class="divider"></li>
             <li class="nav-title">Extras</li>
             <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="/#">
+              <a class="nav-link nav-dropdown-toggle" href="#">
                 <i class="nav-icon icon-star"></i> Pages</a>
               <ul class="nav-dropdown-items">
                 <li class="nav-item">
@@ -188,6 +188,10 @@
                 </li>
               </ul>
             </li>
+
+            <li class="divider"></li>
+            <li class="divider"></li>
+            <li class="divider"></li>
             <li class="nav-item mt-auto">
               <a class="nav-link nav-link-success" href="/https://coreui.io" target="_top">
                 <i class="nav-icon icon-cloud-download"></i> Download CoreUI</a>

@@ -9,10 +9,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
 
-    <link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
-    <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
-    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="/vendor/coreui/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="/vendor/flags/css/flag-icon.min.css" rel="stylesheet">
+    <link href="/vendor/font-awesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -30,7 +30,7 @@
 
     <!-- Styles -->
     <!-- Main styles for this application-->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="app flex-row align-items-center">
@@ -40,5 +40,11 @@
             </div>
         </div>
     </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/vendor/coreui/js/coreui.min.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>
