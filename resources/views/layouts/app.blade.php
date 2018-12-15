@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/icon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/icon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+
+
+    <link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -37,36 +55,35 @@
       ]) !!};
     </script>
 
-    <script>
-    if ('serviceWorker' in navigator ) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
-          // registration failed :(
-          console.log('ServiceWorker registration failed: ', err);
-        });
-      });
-    }
-    </script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
-<body class="app header-fixed sidebar-fixed sidebar-lg-show">
-    <div id="app">
-        @include('layouts.header')
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+        @include('partials.header')
         <div class="app-body">
-            @include('layouts.sidebar')
-            <main class="main animated fadeIn">
+            @include('partials.sidebar')
+            <main class="main">
               @yield('content')
-            </main>
-        </div>
-    </div>
-</body>
+            </main><!-- /main -->
+            @include('partials.historybar')
+        </div><!-- /app-body -->
+        @include('partials.header')
+    <!-- CoreUI and necessary plugins-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/pace-progress/pace.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
+    <script src="js/main.js"></script>
+@stack('scripts')
+  </body>
 </html>
