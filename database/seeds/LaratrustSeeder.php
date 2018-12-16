@@ -21,7 +21,7 @@ class LaratrustSeeder extends Seeder
         foreach ($config as $key => $modules) {
 
             // Create a new role
-            $role = \Modules\Core\Role::create([
+            $role = \Modules\Core\Models\Role::create([
                 'name' => $key,
                 'display_name' => ucwords(str_replace('_', ' ', $key)),
                 'description' => ucwords(str_replace('_', ' ', $key))
@@ -37,7 +37,7 @@ class LaratrustSeeder extends Seeder
 
                     $permissionValue = $mapPermission->get($perm);
 
-                    $permissions[] = \Modules\Core\Permission::firstOrCreate([
+                    $permissions[] = \Modules\Core\Models\Permission::firstOrCreate([
                         'name' => $permissionValue . '-' . $module,
                         'display_name' => ucfirst($permissionValue) . ' ' . ucfirst($module),
                         'description' => ucfirst($permissionValue) . ' ' . ucfirst($module),
@@ -53,7 +53,7 @@ class LaratrustSeeder extends Seeder
             $this->command->info("Creating '{$key}' user");
 
             // Create default user for each role
-            $user = \Modules\Core\User::create([
+            $user = \Modules\Core\Models\User::create([
                 'name' => ucwords(str_replace('_', ' ', $key)),
                 'email' => $key.'@app.com',
                 'password' => bcrypt('password')
@@ -70,7 +70,7 @@ class LaratrustSeeder extends Seeder
                 foreach ($modules as $module => $value) {
 
                     // Create default user for each permission set
-                    $user = \Modules\Core\User::create([
+                    $user = \Modules\Core\Models\User::create([
                         'name' => ucwords(str_replace('_', ' ', $key)),
                         'email' => $key.'@app.com',
                         'password' => bcrypt('password'),
@@ -82,7 +82,7 @@ class LaratrustSeeder extends Seeder
 
                         $permissionValue = $mapPermission->get($perm);
 
-                        $permissions[] = \Modules\Core\Permission::firstOrCreate([
+                        $permissions[] = \Modules\Core\Models\Permission::firstOrCreate([
                             'name' => $permissionValue . '-' . $module,
                             'display_name' => ucfirst($permissionValue) . ' ' . ucfirst($module),
                             'description' => ucfirst($permissionValue) . ' ' . ucfirst($module),

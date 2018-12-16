@@ -21,6 +21,10 @@ Route::get('/home', function () {
     return redirect('dashboard');
 });
 
+Route::get('/colors', function () {
+    return view('pages/colors');
+});
+
 Route::get('/typography', function () {
     return view('pages/typography');
 });

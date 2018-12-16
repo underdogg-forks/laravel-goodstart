@@ -84,17 +84,17 @@ return [
         /**
          * Role model
          */
-        'role' => 'Modules\Core\Role',
+        'role' => 'Modules\Core\Models\Role',
 
         /**
          * Permission model
          */
-        'permission' => 'Modules\Core\Permission',
+        'permission' => 'Modules\Core\Models\Permission',
 
         /**
          * Team model
          */
-        'team' => 'Modules\Core\Team',
+        'team' => 'Modules\Core\Models\Team',
 
     ],
 

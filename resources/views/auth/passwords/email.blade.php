@@ -14,12 +14,13 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">@</span>
                     </div>
-                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="{{ __('Email Address') }}" required>
+                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
+                        name="email" value="{{ old('email') }}" placeholder="{{ __('Email Address') }}" required>
 
                     @if ($errors->has('email'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
                     @endif
                 </div>
 
@@ -28,9 +29,9 @@
                 </button>
 
                 @if (session('status'))
-                    <div class="alert alert-success mt-4" role="alert">
-                        {{ session('status') }}
-                    </div>
+                <div class="alert alert-success mt-4" role="alert">
+                    {{ session('status') }}
+                </div>
                 @endif
             </form>
         </div>

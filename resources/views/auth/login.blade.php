@@ -17,7 +17,9 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">@</span>
                         </div>
-                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="{{ __('Email Address') }}" required autofocus>
+                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
+                            name="email" value="{{ old('email') }}" placeholder="{{ __('Email Address') }}" required
+                            autofocus>
 
                         @if ($errors->has('email'))
                         <span class="invalid-feedback" role="alert">
@@ -31,7 +33,8 @@
                                 <i class="icon-lock"></i>
                             </span>
                         </div>
-                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Password') }}" required>
+                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
+                            name="password" placeholder="{{ __('Password') }}" required>
 
                         @if ($errors->has('password'))
                         <span class="invalid-feedback" role="alert">
@@ -41,7 +44,8 @@
                     </div>
                     <div class="input-group mb-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                            <input class="form-check-input" type="checkbox" name="remember" id="remember"
+                                {{ old('remember') ? 'checked' : '' }}>
 
                             <label class="form-check-label" for="remember">
                                 {{ __('Remember Me') }}
@@ -64,7 +68,8 @@
             </div>
             <div class="card-footer p-4 d-lg-none">
                 <div class="col-12 text-right">
-                    <a class="btn btn-outline-primary btn-block mt-3" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <a class="btn btn-outline-primary btn-block mt-3" href="{{ route('register') }}">{{ __('Register')
+                        }}</a>
                 </div>
             </div>
         </div>

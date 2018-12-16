@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +20,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <script>
-      window.Laravel = {!! json_encode([
+        window.Laravel = {!! json_encode([
         'csrfToken' => csrf_token(),
         'user' => Auth::user()
       ]) !!};
@@ -32,23 +33,25 @@
     <!-- Styles -->
     <!-- Main styles for this application-->
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
 </head>
-<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
-        @include('partials.header')
-        <div class="app-body">
-            @include('partials.sidebar')
-            <main class="main">
-              @yield('content')
-            </main><!-- /main -->
-            @include('partials.historybar')
-        </div><!-- /app-body -->
-        @include('partials.header')
+
+<body class="app header-fixed footer-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show sidebar-minimized">
+    @include('partials.header')
+    <div class="app-body">
+        @include('partials.sidebar')
+        <main class="main">
+            @yield('content')
+        </main><!-- /main -->
+        @include('partials.historybar')
+    </div><!-- /app-body -->
+    @include('partials.footer')
     <!-- CoreUI and necessary plugins-->
     <script src="/vendor/jquery/dist/jquery.min.js"></script>
     <script src="/vendor/popper.js/dist/umd/popper.min.js"></script>
     <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/vendor/coreui/js/coreui.min.js"></script>
     <script src="/js/app.js"></script>
-@stack('scripts')
-  </body>
+    @stack('scripts')
+</body>
 </html>

@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+@import '_variables';
 // Dark mode ********* implement
-//@import "~bootswatch/dist/darkly/variables";
+// @import "~bootswatch/dist/darkly/variables";
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -20,4 +20,4 @@
 @import "~vue-multiselect/dist/vue-multiselect.min.css";
 
 // styles
-@import 'styles.scss'
+@import '_styles.scss'
