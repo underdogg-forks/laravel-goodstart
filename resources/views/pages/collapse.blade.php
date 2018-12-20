@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('core::layouts.master')
 @section('content')
 
 <!-- Breadcrumb-->
